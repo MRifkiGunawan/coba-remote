@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <style>
+h2{
+    text-align: center;
+}     
+h4{
+    text-align: center;
+}   
+.tombol{
+    text-align: center;
+    }
+button{
+    background:#2C97DF;
+    color:white;
+    border-top:0;
+  border-left:0;
+  border-right:0;
+  padding:10px 20px;
+  font-family:sans-serif;
+  
+
+}
+    </style>
+    <head>
+    <title>
+        counting
+    </title>
+    </head>
+<body>
+    <h2>Counting</h2>
+    <h4 id="nomor">0</h4>
+
+    <div class="tombol">
+<button  id="turun" onclick="down()">Down</button> 
+<button onclick="UP()">Up</button>
+<button onclick="Reset()">Reset</button>
+</div>
+
+</body>
+<script>
+    let teks = document.getElementById("nomor");
+    let turun = document.getElementById("turun");
+    var number =0;    
+function down(){    
+    number--;
+    teks.innerHTML =  number;
+    if (number < 0) {
+        teks.innerHTML = 0
+        number=0
+    } return 
+}
+function UP(){
+    number++;
+    teks.innerHTML =  number;
+}
+function Reset(){
+    number = 0;
+    teks.innerHTML = number;
+}
+
+
+</script>
+</html>
